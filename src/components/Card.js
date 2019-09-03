@@ -6,7 +6,7 @@ class CreateCard extends React.Component {
     }
 
     render() {
-        console.log(this.props.propsToCard.name)
+        // console.log(this.props.propsToCard.name)
         return (
             <>
                 <h2>{this.props.propsToCard.name}</h2>

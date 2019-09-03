@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Card from './components/Card'
+import FollowersCards from './components/Followers'
 import axios from 'axios'
 
 class App extends React.Component {
@@ -30,11 +31,12 @@ class App extends React.Component {
   }
 
   render () {
-    // console.log(this.state)
+    // console.log(this.state.user)
+    // console.log(this.state.followers)
     return (
       <>
        <Card propsToCard = {this.state.user}/>
-       {/* <FollowersCards propsToFollowers = {this.state.followers} */}
+       <FollowersCards propsToFollowers = {this.state.followers} />
       </>
     );
   }
