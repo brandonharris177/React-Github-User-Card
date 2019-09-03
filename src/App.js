@@ -34,10 +34,10 @@ class App extends React.Component {
     // console.log(this.state.user)
     // console.log(this.state.followers)
     return (
-      <>
+      <div className = "app-body">
        <Card propsToCard = {this.state.user}/>
        <FollowersCards propsToFollowers = {this.state.followers} />
-      </>
+      </div>
     );
   }
   

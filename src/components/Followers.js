@@ -1,4 +1,5 @@
 import React from 'react';
+import {Card} from  "semantic-ui-react";
 
 class FollowersCards extends React.Component {
     constructor(props) {
@@ -10,10 +11,14 @@ class FollowersCards extends React.Component {
         return (
             <>
                 {this.props.propsToFollowers.map(follower => 
-                    <div key = {follower.id}>
-                        <img src = {follower.avatar_url} alt = {`a picture of ${follower.login}`} />
-                        <span>{follower.login}</span>
-                    </div>
+                    <Card key = {follower.id}>
+                        <div className = "image">
+                            <img src = {follower.avatar_url} alt = {`a picture of ${follower.login}`} />
+                        </div>
+                        <div className = "content">
+                            <div className = "header">{follower.login}</div>
+                        </div>
+                    </Card>
                 )}
             </>
         )
