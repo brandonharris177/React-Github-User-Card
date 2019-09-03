@@ -16,12 +16,13 @@ class App extends React.Component {
       // .then(res => console.log(res)
       // )
       .then(res => this.setState({ user: res.data }),
-      console.log(this.state)
       )
-      .catch(err => console.log("error", 'Server Error'));
+      .catch(err => console.log("error", 'Server Error')
+      );
   }
 
   render () {
+    // console.log(this.state)
     return (
       <>
        <Card propsToCard = {this.state}/>
