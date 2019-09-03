@@ -7,7 +7,8 @@ class App extends React.Component {
   constructor() {
     super ()
     this.state = {
-      user: {}
+      user: {},
+      followers: []
     }
   }
 
@@ -18,6 +19,13 @@ class App extends React.Component {
       .then(res => this.setState({ user: res.data }),
       )
       .catch(err => console.log("error", 'Server Error')
+      )
+      axios.get('https://api.github.com/users/brandonharris177/followers')
+      // .then(res => console.log(res)
+      // )
+      .then(res => this.setState({ followers: res.data }),
+      )
+      .catch(err => console.log("error", 'Server Error')
       );
   }
 
@@ -25,7 +33,8 @@ class App extends React.Component {
     // console.log(this.state)
     return (
       <>
-       <Card propsToCard = {this.state}/>
+       <Card propsToCard = {this.state.user}/>
+       {/* <FollowersCards propsToFollowers = {this.state.followers} */}
       </>
     );
   }
