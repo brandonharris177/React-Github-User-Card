@@ -1,0 +1,7 @@
+.app-body {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-flow: column wrap;
+  background-color: blue;
+}
